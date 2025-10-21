@@ -1,18 +1,40 @@
-# Anything not used by the build system should go here.
-
+# Ignore Git-related files
 .git
 .gitignore
+
+# Ignore IDE and editor configuration files
 .vscode/
+
+# Ignore log files
 *.log
+
+# Ignore environment variables file
 .env
-venv/
-.pytest_cache/
-tests/
+.env.local
+.env.development.local
+.env.production.local
 
-Dockerfile
+# Ignore Next.js build output
+.next/
 
-# Artifacts that will be built during image creation.
-# This should contain all files created during `npm run build`.
-build
+# Ignore node_modules in the root, as we'll manage them explicitly
+# in the Dockerfile for builder and runner stages.
 node_modules
-Software
+
+# Ignore temporary files and caches
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Ignore test-related files if not needed in the image
+# tests/
+# .pytest_cache/
+
+# Ignore Dockerfile itself
+Dockerfile
+docker-compose.yml
+
+# Ignore any other files or directories that are not essential for the build or runtime
+# For example, if you have a 'docs' folder that's not part of the app:
+# docs/
