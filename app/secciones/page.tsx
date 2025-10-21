@@ -99,7 +99,7 @@ export default function SeccionesPage() {
     if (!selectedSeccion) return;
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/secciones/${selectedSeccion.id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/secciones/${selectedSeccion.seccion_id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -123,7 +123,7 @@ export default function SeccionesPage() {
   return (
     <div className="flex">
       <div className="w-64"><AppSidebar /></div>
-      <div className="flex-1 p-8">
+      {/* <div className="flex-1 p-8">
         <h1 className="text-3xl font-bold mb-6">Secciones</h1>
         {loading && <p>Cargando...</p>}
         {error && <p className="text-red-500">{error}</p>}
@@ -265,7 +265,7 @@ export default function SeccionesPage() {
             </ModalBody>
           </Modal>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }

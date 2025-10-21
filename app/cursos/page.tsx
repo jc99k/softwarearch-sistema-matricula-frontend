@@ -11,8 +11,8 @@ interface Curso {
   codigo: string;
   nombre: string;
   descripcion: string;
-  creditos: string;
-  nivel_semestre: string;
+  creditos: number;
+  nivel_semestre: number;
 }
 
 interface CursoCreate {
