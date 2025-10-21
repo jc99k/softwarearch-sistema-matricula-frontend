@@ -1,0 +1,19 @@
+# Anything not used by the build system should go here.
+
+.git
+.gitignore
+.vscode/
+*.log
+.env
+venv/
+.pytest_cache/
+tests/
+.next
+
+Dockerfile
+
+# Artifacts that will be built during image creation.
+# This should contain all files created during `npm run build`.
+build
+node_modules
+Software

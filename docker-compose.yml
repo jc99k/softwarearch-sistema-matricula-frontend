@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  nextjs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      # Replace with your actual API URL or use a .env file
+      NEXT_PUBLIC_API_URL: http://localhost:8000 
+    volumes:
+      - .:/app
+      - /app/node_modules
